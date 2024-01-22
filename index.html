@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Any massage</title>
+ <style>
+    #Information{
+        margin: 300px;
+        box-shadow:10px 10px 10px;
+        border-radius: 20px;
+        border:1px solid black;
+        }
+    input::placeholder {
+     color: black;   
+    }
+    input{
+        border:0;
+        outline:0;
+        color: red;
+        transition:2s;
+        width: 70px;
+    } 
+    input:hover{
+        border-bottom:2px solid blue;
+        width: 200px;
+    }
+    button{
+        color: white;
+        background: black;
+    }
+    h3,h6,input,button{
+        padding: 10px;
+    }
+ </style>   
+</head>
+<body>
+          <form id="Information" autocomplete="on">
+          <h3>WHATSAPP SEND APP </h3>
+            <h6>add number without space like 17272912606 not <strike>+1 (727) 2912606 </strike></h6>
+  <input id="number" type="tel" placeholder="1234567890" maxlength="14" required><br><br>
+   <input id="name" type="text" placeholder="Person Name" required><br><br>
+   <input id="msg" type="text" placeholder="Message" required><br><br>
+<button onclick="send_handle()">SEND</button><br><br>
+</form> 
+</body>
+<script>
+    function send_handle(){
+
+  let num=document.getElementById("number").value;
+
+  let msg= document.getElementById("msg").value;
+
+    let name= document.getElementById("name").value;
+  
+  var win = window.open(`https://wa.me/${num}?text=The%20message%20is%20send%20through%20https://sourceweb1.github.io/What-sapp-message-send/%20.hello%20${name}%20The%20message%20is:-%20${msg}`, '_blank');
+ // win.focus();
+}
+</script>
+</html>
